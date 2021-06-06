@@ -1,0 +1,382 @@
+#page-talk .bodyDash{
+    align-items: center;
+    justify-content: start;
+    padding: 2rem;
+}
+
+.TalksClient{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    column-gap: 6rem;
+    row-gap: 3rem;
+}
+
+.TalksClient > li:nth-child(even){    
+    left: 24vw;
+}
+
+.TalksClient > li:nth-child(odd){
+    left: -24vw;
+}
+
+.TalksClient > li:nth-child(even) .dateTalk{
+    left: -2rem;
+}
+
+.TalksClient::before{
+    content: "";
+    width: 13px;
+    background: rgba(var(--primaria), 1);
+    position: fixed;
+    bottom: 2.3rem;
+    border-radius: var(--radius);
+    display: block;
+    height: 70vh;
+    left: calc(50vw - 9px);
+}
+
+.talk{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    background: rgba(var(--branco), 1);
+    position: relative;
+    max-width: 40vw;
+    width: 100vw;
+}
+
+.talk .dateTalk{
+    padding: .3rem;
+    background: rgba(var(--primaria), 1);
+    color: rgba(var(--branco), 1);
+    font-size: .8rem;
+    font-weight: bold;
+    position: absolute;
+    right: -2rem;
+    top: 1rem;
+    width: 3rem;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.talk b{
+    font-weight: 400;
+    font-size: .7rem;
+}
+
+.headTalk, .IconsAlterarar, .IconsAlterarar li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.assuntTitle{
+    flex: 1;
+    min-height: 3rem;
+    height: auto;
+}
+
+.assuntTitle input{
+    padding: .5rem;
+    border-radius: var(--radius);
+    width: 100%;
+    font-size: 1rem;
+    color: rgba(var(--primaria), 1);
+    border: thin solid rgba(var(--primaria), 1);
+    margin-bottom: .8rem;
+    margin-top: .2rem;
+}
+
+.assuntTitle input:disabled{
+    padding: .5rem;
+    border-radius: var(--radius);
+    width: 100%;
+    font-size: 1rem;
+    color: rgba(var(--preto), .8);
+    border: thin solid rgba(var(--preto), .1);
+    margin-bottom: .8rem;
+    margin-top: .2rem;
+}
+
+.footerTalk input{
+    padding: .1rem;
+    width: 100px;
+    text-align: center;    
+    transition: all ease .3s;
+    color: rgba(var(--primaria), 1);
+    border: thin solid rgba(var(--primaria), 1);
+    border-radius: 4px;
+}
+
+.footerTalk input:disabled{
+    padding: .1rem;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    border: thin solid rgba(var(--preto), .1);
+    color: rgba(var(--preto), .8);
+    transition: all ease .3s;
+}
+
+.footerTalk li{
+    margin-bottom: .7rem;
+}
+
+.talk button{
+    border-radius: var(--radius);
+    border: none;
+    background: rgba(var(--primaria), 1);
+    color: rgba(var(--branco), 1);
+    font-size: .8rem;
+    padding: .5rem 1rem;
+}
+
+.talk button:disabled{
+    opacity: .3;
+}
+
+.headTalk{
+    gap: 1rem;
+    align-items: start;
+}
+
+.IconsAlterarar{
+    gap: .5rem;
+    font-size: .8rem;
+}
+
+.IconsAlterarar li{
+    align-items: center;
+    cursor: pointer;
+}
+
+.IconsAlterarar img{
+    height: 1rem;
+    margin-right: .2rem;
+}
+
+.contentTalk textarea{
+    width: 100%;
+    height: 6rem;
+    font-size: 1rem;
+    border: thin solid rgba(var(--primaria), 1);
+    color: rgba(var(--primaria), 1);
+    margin-bottom: 1rem;
+    margin-top: 0.2rem;
+    border-radius: var(--radius);    
+    padding: .5rem;
+}
+
+.contentTalk textarea:disabled{
+    color: rgba(var(--preto), .8);    
+    border: thin solid rgba(var(--preto), .1);
+}
+
+.footerTalk ul,
+.FrasesModalTalk ul{
+    list-style: initial;
+    font-size: .8rem;
+    padding-left: 1rem;
+}
+
+.footerTalk ul li,
+.FrasesModalTalk ul li{
+    list-style-type: disc;
+}
+
+.FrasesModalTalk ul li{
+    margin-bottom: 1rem;
+}
+
+.FrasesModalTalk input{
+    font-size: .8rem;
+}
+
+.FrasesModalTalk input::placeholder{
+    font-size: .8rem;
+}
+
+.FrasesModalTalk .quemConversou{
+    width: 12rem;
+}
+
+.FrasesModalTalk{
+    width: 100%;
+}
+
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    background: rgba(var(--primaria), .6);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalNovoTalk{
+    width: 50vw;
+    height: auto;
+    padding: 2rem;
+    background: rgba(var(--branco), 1);
+    box-shadow: 0 0 15px -3px rgba(var(--preto), .3);
+    border-radius: var(--radius);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.modalNovoTalk form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.modalNovoTalk input{
+    width: 18.75rem;
+    height: 3.43rem;
+    padding: 0 1rem;
+    color: rgba(var(--primaria), 1);
+    border-radius: var(--radius);
+    border: thin solid rgba(var(--primaria), .8);
+    background: rgba(var(--branco), .1);
+    transition: var(--transition);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.modalNovoTalk textarea{
+    width: 100%;
+    height: 7rem;
+    padding: 1rem;
+    color: rgba(var(--primaria), 1);
+    border-radius: var(--radius);
+    border: thin solid rgba(var(--primaria), .8);
+    background: rgba(var(--branco), .1);
+    transition: var(--transition);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.modalNovoTalk input:focus, .modalNovoTalk textarea:focus{
+    color: rgba(var(--primaria), 1);
+    border: thin solid rgba(var(--branco), 1);
+    background: rgba(var(--branco), .2);
+    box-shadow: 0 0 10px -2px rgba(var(--preto), .3);
+}
+
+.modalNovoTalk input:-internal-autofill-selected {
+    color: rgba(var(--primaria), 1);
+    border: thin solid rgba(var(--branco), 1);
+    background: rgba(var(--branco), .3);
+}
+
+.modalNovoTalk input::placeholder, 
+.modalNovoTalk textarea::placeholder{
+    color: rgba(var(--primaria), 1);
+}
+
+.modalNovoTalk input:target{
+    background: #f90;
+}
+
+.modalNovoTalk button{
+    width: 16.25rem;
+    height: 3.81rem;
+    border-radius: var(--radius);
+    border: thin solid rgba(var(--primaria), 1);
+    background: rgba(var(--primaria), 1);
+    color: rgba(var(--branco), 1);
+
+    transition: var(--transition);
+    cursor: pointer;
+
+    align-self: flex-end;
+    font-size: 1rem;
+}
+
+.modalNovoTalk button:hover{
+    filter: saturate(.8);
+}
+
+.modalNovoTalk .dateTalk{
+    max-width: 7.25rem;
+}
+
+.modalNovoTalk .assuntoTalk{
+    flex: 1;
+}
+
+.FrasesModalTalk input{
+    height: 2rem;
+    width: 10rem;
+}
+
+.iconFechar{
+    width: 2rem;
+    height: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(var(--primaria), 1);
+    border-radius: var(--radius);
+
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.NovaConversa{
+    height: 3rem;
+    width: auto;
+
+    padding: .3rem 1rem;
+
+    font-size: 1rem;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(var(--verde), 1);
+    color: rgba(var(--branco), 1);
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+    cursor: pointer;
+
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+}
+
+.NovaConversa:hover{
+    box-shadow: 0 0 15px -3px rgba(var(--preto), .3);
+}
+
+.iconFechar img{
+    filter: invert();
+}
+
+.iconFechar:hover{
+    filter: saturate(.8);
+}

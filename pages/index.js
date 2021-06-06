@@ -10,7 +10,7 @@ export default function Home() {
       <div id="pageDash">
 
         <Head>
-          <title>DashBoard</title>
+          <title>Dashboard</title>
           <link rel="shortcut icon" href="/desenho-logo.svg" type="image/x-icon"></link>
         </Head>
 
@@ -21,13 +21,13 @@ export default function Home() {
               Todos os Clientes
           </h1>
 
-          <ul class={styles.ClientsSquad}> 
+          <ul className={styles.ClientsSquad}> 
             <a href="/talks/branco">
-                <li class={styles.client}>
-                    <p class={styles.titleClient}>
+                <li className={styles.client}>
+                    <p className={styles.titleClient}>
                         Branco
                     </p>
-                    <button class={styles.button}>
+                    <button className={styles.button}>
                         Ver <strong>Cliente</strong>
                     </button>                                        
                 </li>
@@ -35,7 +35,7 @@ export default function Home() {
           </ul>
 
         </div>
-
+        
         <Footer/>
 
       </div>  
