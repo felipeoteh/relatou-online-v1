@@ -1,21 +1,45 @@
 import Head from 'next/head'
-import stylesLogin from '../styles/login/login.module.css'
+import styles from '../styles/dash/dash.module.css'
+
+import Header from './partials/header.js'
+import Footer from './partials/footer.js'
 
 export default function Home() {
-  return (
+  return (    
+    <styles>
+      <div id="pageDash">
 
-    <div id={stylesLogin.pageLogin}>
+        <Head>
+          <title>DashBoard</title>
+          <link rel="shortcut icon" href="/desenho-logo.svg" type="image/x-icon"></link>
+        </Head>
 
-      <div className={stylesLogin.BoxLogin}>        
-          <img src="/logo-relatou-branco.svg" alt="Faça seu Login!" />
-          <form action="/dash" method="">
-            <input type="text" name="nome" id="nome" placeholder="Login" />
-            <input type="password" name="senha" id="senha" placeholder="Senha" />
-            <button>Fazer <strong>Login</strong></button>
-          </form>
-      </div>
+        <Header/>
 
-    </div>    
+        <div className="bodyDash">
+          <h1 className="Title">
+              Todos os Clientes
+          </h1>
+
+          <ul class={styles.ClientsSquad}> 
+            <a href="/talks/branco">
+                <li class={styles.client}>
+                    <p class={styles.titleClient}>
+                        Branco
+                    </p>
+                    <button class={styles.button}>
+                        Ver <strong>Cliente</strong>
+                    </button>                                        
+                </li>
+            </a>                  
+          </ul>
+
+        </div>
+
+        <Footer/>
+
+      </div>  
+    </styles>  
 
   )
 }

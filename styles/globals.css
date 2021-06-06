@@ -118,6 +118,12 @@ footer a{
     display: none !important;
 }
 
+#pageDash .bodyDash{
+    align-items: center;
+    justify-content: start;
+    padding: 2rem;
+}
+
 /* ::-webkit-scrollbar-track-piece{
     background: rgba(var(--primaria), .1);
 } */
