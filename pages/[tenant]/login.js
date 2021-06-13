@@ -2,11 +2,11 @@ import Head from 'next/head'
 import stylesLogin from '../../styles/login/login.module.css'
 import { signIn, signOut, useSession } from 'next-auth/client'
 
-export default function Login(pageProps) {
+export default function Login() {
   const { session } = useSession() 
 
   return (    
-
+    
     <div id={stylesLogin.pageLogin}>
 
     <Head>
@@ -34,7 +34,7 @@ export default function Login(pageProps) {
             )
             }
 
-<button onClick={ () => signOut() } >Fazer <strong>Logout</strong></button>
+      <button onClick={ () => signOut() } >Fazer <strong>Logout</strong></button>
       
       </div>
 

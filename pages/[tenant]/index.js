@@ -10,6 +10,7 @@ export default function Home() {
 
   const { session } = useSession() 
   console.log(session)
+  
     return (    
       <styles>
         <div id="pageDash">
@@ -23,7 +24,6 @@ export default function Home() {
         ) : (         
           
            <p>Usuário Logado</p>
-
         )
         }
 
