@@ -4,17 +4,30 @@ import styles from '../../styles/dash/dash.module.css'
 import Header from '../partials/header.js'
 import Footer from '../partials/footer.js'
 
-export default function Home() {
-  return (    
-    <styles>
-      <div id="pageDash">
+import {useSession} from 'next-auth/client'
 
+export default function Home() {
+
+  const { session } = useSession() 
+  console.log(session)
+    return (    
+      <styles>
+        <div id="pageDash">
         <Head>
-          <title>Dashboard</title>
-          <link rel="shortcut icon" href="/desenho-logo.svg" type="image/x-icon"></link>
+            <title>Dashboard</title>
+            <link rel="shortcut icon" href="/desenho-logo.svg" type="image/x-icon"></link>
         </Head>
 
-        <Header/>
+        { !session ? (
+          <p>Usuário não logado</p>
+        ) : (         
+          
+           <p>Usuário Logado</p>
+
+        )
+        }
+
+        {/* <Header/>
 
         <div className="bodyDash">
           <h1 className="Title">
@@ -35,11 +48,11 @@ export default function Home() {
           </ul>
 
         </div>
-        
-        <Footer/>
 
-      </div>  
-    </styles>  
+        <Footer/> */}
+        </div>  
+      </styles>  
 
-  )
+    )
+  
 }
