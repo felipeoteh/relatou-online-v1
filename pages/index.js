@@ -10,7 +10,7 @@ export default function Home() {
       <div id="pageDash">
 
         <Head>
-          <title>Dashboard</title>
+          <title>Bem vindo!</title>
           <link rel="shortcut icon" href="/desenho-logo.svg" type="image/x-icon"></link>
         </Head>
 
@@ -18,21 +18,10 @@ export default function Home() {
 
         <div className="bodyDash">
           <h1 className="Title">
-              Todos os Clientes
-          </h1>
+              Bem Vindo
+          </h1>   
 
-          <ul className={styles.ClientsSquad}> 
-            <a href="/talks/branco">
-                <li className={styles.client}>
-                    <p className={styles.titleClient}>
-                        Branco
-                    </p>
-                    <button className={styles.button}>
-                        Ver <strong>Cliente</strong>
-                    </button>                                        
-                </li>
-            </a>                  
-          </ul>
+          Fazer login como: <a href="/benova/login">Benova</a>     
 
         </div>
         
