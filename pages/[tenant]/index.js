@@ -4,13 +4,13 @@ import styles from '../../styles/dash/dash.module.css'
 import Header from '../partials/header.js'
 import Footer from '../partials/footer.js'
 
-import {useSession} from 'next-auth/client'
+import { useSession } from 'next-auth/client'
 
 export default function Home() {
 
-  const { session } = useSession() 
+  const [ session, loading  ] = useSession() 
   console.log(session)
-  
+
     return (    
       <styles>
         <div id="pageDash">
@@ -18,6 +18,10 @@ export default function Home() {
             <title>Dashboard</title>
             <link rel="shortcut icon" href="/desenho-logo.svg" type="image/x-icon"></link>
         </Head>
+
+        { loading && (
+          <p>carregando...</p>
+        )}
 
         { !session ? (
           <p>Usuário não logado</p>
