@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import styles from '../../styles/talks/talks.module.css'
+import styles from '../../../styles/talks/talks.module.css'
 
-import Header from '../partials/header.js'
-import Footer from '../partials/footer.js'
+import Header from '../../partials/header.js'
+import Footer from '../../partials/footer.js'
 
 export default function TalkOpen(){   
 

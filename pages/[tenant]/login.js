@@ -7,7 +7,7 @@ export default function Login() {
     <div id={stylesLogin.pageLogin}>
 
     <Head>
-      <title>Faça Login para Continuar - relatou.online</title>
+      <title>Faça Login para Continuar</title>
       <link rel="shortcut icon" href="/desenho-logo.svg" type="image/x-icon"></link>
     </Head>
 
