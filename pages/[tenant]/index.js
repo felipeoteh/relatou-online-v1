@@ -6,10 +6,16 @@ import Footer from '../partials/footer.js'
 
 import { useSession } from 'next-auth/client'
 
+import { useRouter } from 'next/router'
+
+
+
 export default function Home() {
 
   const [ session, loading  ] = useSession() 
-  console.log(session)
+  const router = useRouter()
+  const { tenant } = router.query
+  const tenantUrl = tenant + "/talks/branco"
 
     return (    
       <styles>
@@ -23,23 +29,21 @@ export default function Home() {
           <p>carregando...</p>
         )}
 
+        <Header/>
+
         { !session ? (
-          <p>Usuário não logado</p>
+          <div className="bodyDash">
+            <h1 className="Title">Faça login para ter acesso ao conteúdo</h1>
+          </div>
         ) : (         
           
-           <p>Usuário Logado</p>
-        )
-        }
-
-        {/* <Header/>
-
-        <div className="bodyDash">
+          <div className="bodyDash">
           <h1 className="Title">
               Todos os Clientes
           </h1>
 
           <ul className={styles.ClientsSquad}> 
-            <a href="/talks/branco">
+            <a href={tenantUrl}>
                 <li className={styles.client}>
                     <p className={styles.titleClient}>
                         Branco
@@ -52,8 +56,12 @@ export default function Home() {
           </ul>
 
         </div>
+        )
+        }
 
-        <Footer/> */}
+        
+
+        <Footer/>
         </div>  
       </styles>  
 

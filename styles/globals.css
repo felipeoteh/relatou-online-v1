@@ -49,10 +49,67 @@ header{
     height: 5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background: rgba(var(--primaria), 1);
     position: fixed;
     top: 0px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.Logado{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: .85rem;
+}
+
+.Logado img{
+    height: 3.2rem;
+    border-radius: 50%;
+    margin-right: .5rem;
+    /* border: 1px solid #f1f1f1; */
+    box-shadow: 0 0 10px -2px rgba(var(--preto), .3);
+}
+
+.BtLogOut{
+    font-size: .8rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.BtLogIn{
+    background: rgba(var(--branco), .9);
+    padding: .4rem .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    cursor: pointer;
+    color: rgba(var(--primaria), 1);
+    box-shadow: 0 0 10px -2px rgba(var(--preto), .3);
+}
+
+.BtLogIn:hover{
+    background: rgba(var(--branco), 1);
+    box-shadow: 0 0 10px -2px rgba(var(--preto), .5);
+}
+
+.BtLogIn strong{
+    margin-left: .25rem;
+}
+
+.BtLogIn img{
+    height: 1rem;
+    padding-right: .4rem;
+    margin-right: .4rem;
+    border-right: thin solid rgba(var(--primaria), .2);
+}
+
+.BtLogOut:hover{
+    text-decoration: underline;
 }
 
 .logo img{
@@ -123,6 +180,8 @@ footer a{
     justify-content: start;
     padding: 2rem;
 }
+
+
 
 /* ::-webkit-scrollbar-track-piece{
     background: rgba(var(--primaria), .1);

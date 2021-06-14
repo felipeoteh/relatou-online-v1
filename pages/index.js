@@ -21,7 +21,7 @@ export default function Home() {
               Bem Vindo
           </h1>   
 
-          Fazer login como: <a href="/benova/login">Benova</a>     
+          Acesse o painel da: <a href="/benova">Benova</a>     
 
         </div>
         
