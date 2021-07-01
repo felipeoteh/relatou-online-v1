@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
     <footer>
-        <div class="footer">
+        <div className="footer">
             <p>
                 <span>Feito com</span>
                 <img src="/heart.svg"/> 

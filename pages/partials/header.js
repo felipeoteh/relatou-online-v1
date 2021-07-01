@@ -5,7 +5,7 @@ export default function Header() {
     return (
     <header>  
         <div className="header">            
-            <a href="/" class="logo">
+            <a href="/" className="logo">
                 <img src="/logo-relatou-branco.svg" alt="relatou.online"/>
             </a>
         </div>

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/dash/dash.module.css'
 
 import Header from './partials/header.js'
 import Footer from './partials/footer.js'
@@ -11,7 +10,7 @@ export default function Home() {
 
         <Head>
           <title>Bem vindo!</title>
-          <link rel="shortcut icon" href="/desenho-logo.svg" type="image/x-icon"></link>
+          <link rel="shortcut icon" href="/desenho-logo.svg" type="image/x-icon"/>
         </Head>
 
         <Header/>

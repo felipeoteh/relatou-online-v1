@@ -9,10 +9,10 @@ export default function Login() {
     
     <div id={stylesLogin.pageLogin}>
 
-    <Head>
-      <title>Faça Login para Continuar</title>
-      <link rel="shortcut icon" href="/desenho-logo.svg" type="image/x-icon"></link>
-    </Head>
+      <Head>
+        <title>Faça Login para Continuar</title>
+        <link rel="shortcut icon" href="/desenho-logo.svg" type="image/x-icon"></link>
+      </Head>
 
       {/* <div className={stylesLogin.BoxLogin}>        
           <img src="/logo-relatou-branco.svg" alt="Faça seu Login!" />
