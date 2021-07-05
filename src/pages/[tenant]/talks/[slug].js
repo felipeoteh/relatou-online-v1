@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import Header from '../../partials/header.js'
-import Footer from '../../partials/footer.js'
+import Header from '../../partials/header'
+import Footer from '../../partials/footer'
 
 export default function TalkOpen(){   
 

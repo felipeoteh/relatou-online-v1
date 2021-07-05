@@ -1,4 +1,12 @@
 import { signIn, signOut, useSession } from 'next-auth/client'
+import MenuDash from './menu'
+
+import { CgHomeAlt } from 'react-icons/cg'
+import { GoProject } from 'react-icons/go'
+import { FaRegUserCircle } from 'react-icons/fa'
+
+import Link from 'next/link'
+
 
 export default function Header() {
     const [ session  ] = useSession() 
@@ -25,6 +33,15 @@ export default function Header() {
                 </div>
             )
             }
+        </div>
+        <div className="MenuDash">
+            <MenuDash />
+                <ul className="MenuDash">
+                    <li><Link href="/benova"><a><CgHomeAlt/> Home</a></Link></li>
+                    <li><Link href="/benova/projetos"><a><GoProject/> Projetos</a></Link></li>
+                    <li><Link href="/benova/perfil"><a><FaRegUserCircle/>Perfil</a></Link></li>
+                </ul>
+            <MenuDash />
         </div>
     </header>
     )

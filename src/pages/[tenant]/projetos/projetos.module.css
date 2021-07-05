@@ -1,0 +1,29 @@
+.ProjetoList{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: .5rem;    
+}
+
+.TituloListaProjetos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    padding: .3rem;
+    background: #f1f1f1; 
+}
+
+.ProjetoList > div,
+.TituloListaProjetos > div{
+    flex: 1;
+    text-align: center
+}
+
+.Title{
+    margin-bottom: 1rem;
+}
+
+.ProjetoList + .ProjetoList{
+    
+    border-top: thin solid #f1f1f1;
+}
